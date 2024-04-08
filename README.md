@@ -9,7 +9,7 @@ This is a Django-based web application for a bookstore. The project includes a m
 ### Getting Started
 1. Clone the repository:
 ```bash
-git clone 
+git clone https://github.com/Gvantsie/django-app-Book-Market.git
 ```
 2. Install the required dependencies:
 ```bash
@@ -43,19 +43,21 @@ The app provides two views:
 
 Book Listing View: This view displays a list of all books in the catalog.
 Book Detail View: This view shows detailed information about a single book. The book data is returned in JSON format.
-URLs
+
+### URLs
 The views are registered in the project's URL patterns:
+- market/ - Book Listing View
+- market/<int:pk>/ - Book Detail View
 
-market/ - Book Listing View
-market/<int:pk>/ - Book Detail View
-Running the Project
+### Running the Project
 
-Apply the database migrations:
-python manage.py migrate
-Create a superuser for the admin interface:
-python manage.py createsuperuser
-Run the development server:
-
-python manage.py runserver
+1. Apply the database migrations:
+> python manage.py migrate
+2. Create a superuser for the admin interface:
+> python manage.py createsuperuser
+3. Run the development server:
+> python manage.py runserver
 The application should now be accessible at http://127.0.0.1:8000/.
 Please note that this README.md file assumes you are using SQLite3 as the database and developing the project locally. For production deployment, you would need to update the instructions accordingly.
+
+>>Gvantsa
