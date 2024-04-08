@@ -41,7 +41,7 @@
     <div class="container">
         {% for book in books %}
         <div class="book">
-            <img src="{{ MEDIA_URL }}{{ book.cover }}" alt=" ">
+            <img src="/{{ book.cover }}" alt=" ">
             <h2>{{ book.title }}</h2>
             <p><strong>Author:</strong> {{ book.author }}</p>
             <p><strong>Description:</strong> {{ book.description }}</p>
