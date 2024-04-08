@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-color: #49243E;
+            background-color: #DBAFA0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .book {
+            width: 25%;
+            background-color: #BB8493;
+            border: 1px solid #704264;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .book h2 {
+            margin-top: 0;
+        }
+        .book p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for book in books %}
+        <div class="book">
+            <img src="{{ MEDIA_URL }}{{ book.cover }}" alt=" ">
+            <h2>{{ book.title }}</h2>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>Description:</strong> {{ book.description }}</p>
+            <p><strong>Category:</strong> {{ book.category }}</p>
+            <p><strong>Price:</strong> ₾ {{ book.price }}</p>
+            <p><strong>Stock:</strong> {{ book.stock }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
