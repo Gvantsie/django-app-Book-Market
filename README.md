@@ -57,6 +57,7 @@ The views are registered in the project's URL patterns:
 > python manage.py createsuperuser
 3. Run the development server:
 > python manage.py runserver   
+
 The application should now be accessible at http://127.0.0.1:8000/.
 Please note that this README.md file assumes you are using SQLite3 as the database and developing the project locally. For production deployment, you would need to update the instructions accordingly.
 
